@@ -13,6 +13,9 @@ const montserrat = Poppins({
 export const metadata: Metadata = {
   title: "Arihant Kamde",
   description: "Arihant's portfolio website",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
