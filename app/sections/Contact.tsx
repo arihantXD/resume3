@@ -3,65 +3,114 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Instagram, Linkedin, Mail } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
+import axios from "axios";
+import Link from "next/link";
+import { toast } from "sonner";
+import { useState } from "react";
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+export const formSchema = z.object({
+  username: z.string().min(3, {
+    message: "Name must be at least 3 characters.",
+  }),
+  email: z.string().email({
+    message: "Email is invalid.",
+  }),
+  message: z.string().min(20, {
+    message: "Message must be at least 20 characters.",
   }),
 });
 
 const ContactSection = () => {
+  const [btnLoading, setBtnLoading] = useState<boolean>(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       username: "",
+      email: "",
+      message: "",
     },
   });
+
+  const sendEmail = async (formData: any) => {
+    try {
+      setBtnLoading(true);
+      const { data } = await axios.post("/api/contact", formData);
+      console.log(data?.message);
+      setBtnLoading(false);
+      toast.success(data?.message);
+    } catch (error: any) {
+      setBtnLoading(false);
+      toast.error(
+        error?.response?.data?.message ||
+          "Internal error, please mail me manually. Sorry ! 😥",
+        {
+          style: {
+            textAlign: "center",
+          },
+        }
+      );
+      console.log(error);
+    }
+  };
 
   return (
     <div className="pt-12">
       <div className="font-medium text-light-gray">Contact</div>
       <div>
         <div className="py-4 flex flex-wrap gap-4 text-xs">
+          <Link
+            href={"/Resume.docx"}
+            className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center"
+          >
+            <Download size={14} />
+            Resume
+          </Link>
           <div className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center">
             <Mail size={14} />
-            <div>Gmail</div>
+            <div>kamdearihant01@gmail.com</div>
           </div>
-          <div className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center">
+          <Link
+            href={"https://www.linkedin.com/in/arihant-kamde-2976451b5"}
+            target="_blank"
+            className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center"
+          >
             <Linkedin size={14} />
-            <div>linkedIn</div>
-          </div>
-          <div className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center">
+            <div>LinkedIn</div>
+          </Link>
+          <Link
+            href={"https://github.com/arihantXD"}
+            target="_blank"
+            className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center"
+          >
             <Github size={14} />
             <div>GitHub</div>
-          </div>
-          <div className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center">
+          </Link>
+          <Link
+            href={"https://www.instagram.com/arihant0.1?igsh=N3Bocngzc2M5a3R5"}
+            target="_blank"
+            className="bg-extra-light-gray px-3 border border-lighter-gray rounded-lg py-1 w-fit flex gap-2 items-center"
+          >
             <Instagram size={14} />
             <div>Instagram</div>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="text-center font-medium py-4">or</div>
       <div className="bg-extra-light-gray px-4 py-8 rounded-lg border-[1px] border-lighter-gray">
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(() => {
-              console.log("hii");
-            })}
-          >
+          <form onSubmit={form.handleSubmit(sendEmail)}>
             <div className="flex flex-col gap-4">
               <FormField
                 control={form.control}
@@ -81,7 +130,7 @@ const ContactSection = () => {
               />
               <FormField
                 control={form.control}
-                name="username"
+                name="email"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -97,7 +146,7 @@ const ContactSection = () => {
               />
               <FormField
                 control={form.control}
-                name="username"
+                name="message"
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -111,8 +160,13 @@ const ContactSection = () => {
                   </FormItem>
                 )}
               />
-
-              <Button className="bg-black">Send</Button>
+              <Button
+                onClick={form.handleSubmit(sendEmail)}
+                className="bg-black"
+                disabled={btnLoading ? true : false}
+              >
+                Send
+              </Button>
             </div>
           </form>
         </Form>

@@ -1,5 +1,6 @@
 import React from "react";
 import { CustomAvatar } from "../components/custom/Avatar";
+import Link from "next/link";
 
 const IntroSection = () => {
   return (
@@ -11,19 +12,30 @@ const IntroSection = () => {
       </div>
       <div className="pt-4 flex flex-col gap-4">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
-          eius. Lorem ipsum dolor sit amet.
+          Hi my name is Arihant, I am just a guy with strong passion of
+          technology, development, design and self - improvement. My work
+          emphasizes simplicity, minimalism, and meticulous attention to
+          details. Please checkout{" "}
+          <Link
+            href={"/Resume.docx"}
+            className="text-light-gray underline font-medium"
+          >
+            My Resume.
+          </Link>
         </p>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
-          nulla dolorum illum qui perspiciatis fugit explicabo sapiente eaque
-          dolor quidem.
+          I have experience in web development, designing, database admin,
+          deployment and maintenance. Each project allows me to refine my skills
+          and develop better products.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-          consectetur, debitis pariatur repudiandae dolorem quas architecto
-          error molestiae delectus mollitia, eius eligendi, sequi quia
-          doloremque optio fuga veritatis illo magnam?
+          I utilize a range of tools and software to bring my ideas to life,
+          keeping up with the latest trends and technologies In my projects.{" "}
+          <span className="font-semibold">
+            My ultimate goal is to work on projects that solve real life
+            problems, because I don't think there is anything I can do better
+            than this.
+          </span>
         </p>
       </div>
     </div>

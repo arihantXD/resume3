@@ -2,7 +2,7 @@ const Skills = () => {
   return (
     <div className="pt-12">
       <div className="text-light-gray text-base font-medium">Tech Stack</div>
-      <div className="px-2 py-4 flex flex-wrap justify-center [&>div]:w-[80px] [&>div]:border [&>div]:border-lighter-gray [&>div]:bg-extra-light-gray gap-4 ">
+      <div className="px-2 pb-4 pt-6 flex flex-wrap justify-center [&>div]:w-[80px] [&>div]:border [&>div]:border-lighter-gray [&>div]:bg-extra-light-gray gap-4 ">
         <div className="p-2 rounded  flex flex-col items-center gap-1 w-fit ">
           <img className="w-[30px] h-[30px]" src="/html.svg" alt="" />
           <div className="text-xs font-medium text-dark-gray">HTML</div>
@@ -45,7 +45,7 @@ const Skills = () => {
         </div>
         <div className="p-2 rounded  flex flex-col items-center gap-1 w-fit ">
           <img className="w-[30px] h-[30px]" src="/postgresql.svg" alt="" />
-          <div className="text-xs font-medium text-dark-gray">PostgresSQL</div>
+          <div className="text-xs font-medium text-dark-gray">PostgresSql</div>
         </div>
         <div className="p-2 rounded  flex flex-col items-center gap-1 w-fit ">
           <img className="w-[30px] h-[30px]" src="/github.svg" alt="" />

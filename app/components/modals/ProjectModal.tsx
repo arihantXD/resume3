@@ -5,22 +5,23 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import Link from "next/link";
 
 const ProjectModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <span className="cursor-pointer hover:underline text-light-gray font-medium">
-          More...
+          More Details...
         </span>
       </DialogTrigger>
-      <DialogContent className="w-[95%] min-h-[500px] h-[80vh] overflow-y-auto text-xs">
+      <DialogContent className="w-[97%] min-h-[500px] h-[80vh] overflow-y-auto ">
         <DialogHeader>
-          <DialogTitle className="text-black font-medium text-lg test">
+          <DialogTitle className="text-black font-medium text-lg">
             Personal Projects
           </DialogTitle>
         </DialogHeader>
-        <div className="">
+        <div className="text-sm">
           <div className="pt-2">
             <div className="text-black font-medium text-lg leading-5">
               Full Stack Developer
@@ -29,98 +30,332 @@ const ProjectModal = () => {
               <div className="pt-1">09/2023 - Present</div>
             </div>
             <p className="pt-3">
-              I have worked on multiple projects and hosted them online, some
-              projects eventually transitioned into freelancing opportunities, I
-              my work is client-focused results and delivering impactful
-              solutions.
+              I’ve worked on multiple full-stack projects and successfully
+              deployed them online. Some of these projects led to freelancing
+              opportunities, allowing me to work directly with clients to
+              deliver real-world solutions. Below is my vercel dashboard for
+              reference.
             </p>
           </div>
           <div>
-            <img className="py-2" src="/dashboard.png" alt="" />
+            <img
+              className="py-6"
+              src="/dashboard.png"
+              alt="my vercel dashboard"
+            />
           </div>
-          <div className="flex flex-col gap-8 pt-8">
+          <div className="flex flex-col gap-6 pt-6">
             <div>
-              <div className="font-medium text-light-gray pb-2 text-base">
+              <div className="font-medium text-light-gray pb-1 text-base">
                 Projects
               </div>
+              <div className="pb-2 font-medium">
+                Some Projects take 2 min initially to load so please wait.
+                Thanks!
+              </div>
               <div className="text-black">
                 <div className="font-semibold text-base">LazyDev</div>
                 <div className="font-medium">03/2025 - Present</div>
               </div>
               <div className="py-2">
                 <p>
-                  Developed an end-to-end project which offered various tours in
-                  different modes and difficulties where end users can select
-                  tours according to their interests
+                  Lazy Dev is an ultimate dev productivity tool, it automates
+                  creating resume, project portfolio, and live links along with
+                  a dashboard. Users can just log in, update once, and share
+                  their personalized portfolio page. Built for devs who who are
+                  too lazy to create a portfolio website.
                 </p>
-                <ul className="list-disc p-2 flex flex-col gap-1">
+                <ul className="list-disc p-4 flex flex-col gap-1">
                   <li>
-                    Implemented class diagram for the project, created Enum and
-                    Entities.
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://lazydev-web.onrender.com/"}
+                    >
+                      {" "}
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/lazydev"}
+                    >
+                      GitHub
+                    </Link>
                   </li>
                   <li>
-                    Project Req. - Java, Java Spring Boot, SQL, Postman, HTML,
-                    Tailwind CSS, React Js.
+                    Test Credentials - test@gmail.com (email), test@123
+                    (password)
+                  </li>
+                  <li>
+                    Tech Stack - Next Js, Node Js, Typescript, Express, Prisma,
+                    PostgreSql.
                   </li>
                 </ul>
               </div>
             </div>
             <div>
               <div className="text-black">
-                <div className="font-semibold text-base">LazyDev</div>
+                <div className="font-semibold text-base">Jobify</div>
                 <div className="font-medium">03/2025 - Present</div>
               </div>
               <div className="py-2">
                 <p>
-                  Developed an end-to-end project which offered various tours in
-                  different modes and difficulties where end users can select
-                  tours according to their interests
+                  This project project is designed for streamlined job
+                  application tracking. Users can effortlessly categorize job
+                  roles tech or non - tech, and classify job type.
                 </p>
-                <ul className="list-disc p-2 flex flex-col gap-1">
+                <ul className="list-disc p-4 flex flex-col gap-1">
                   <li>
-                    Implemented class diagram for the project, created Enum and
-                    Entities.
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://jobify-sdkn.onrender.com/"}
+                    >
+                      {" "}
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Jobify"}
+                    >
+                      GitHub
+                    </Link>
                   </li>
                   <li>
-                    Project Req. - Java, Java Spring Boot, SQL, Postman, HTML,
-                    Tailwind CSS, React Js.
+                    Test Credentials : demo1@gmail.com (email), - demo@123
+                    (password)
+                  </li>
+                  <li>
+                    Tech Stack - React Js, Node Js, Express, Mongoose, MongoDB.
                   </li>
                 </ul>
               </div>
             </div>
             <div>
               <div className="text-black">
-                <div className="font-semibold text-base">LazyDev</div>
+                <div className="font-semibold text-base">GenZ</div>
                 <div className="font-medium">03/2025 - Present</div>
               </div>
               <div className="py-2">
                 <p>
-                  Developed an end-to-end project which offered various tours in
-                  different modes and difficulties where end users can select
-                  tours according to their interests
+                  It is a full-stack e-commerce store for Gen Z clothing brand.
+                  Users can seamlessly register, log in, add items to their
+                  cart, and simulate the purchase process. GenZ offers a dummy
+                  flow from registration to purchase, providing a user-friendly
+                  experience for exploring and interacting with the project.
                 </p>
-                <ul className="list-disc p-2 flex flex-col gap-1">
+                <ul className="list-disc p-4 flex flex-col gap-1">
                   <li>
-                    Implemented class diagram for the project, created Enum and
-                    Entities.
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://gen-z-five.vercel.app/"}
+                    >
+                      {" "}
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/genz"}
+                    >
+                      GitHub
+                    </Link>
                   </li>
                   <li>
-                    Project Req. - Java, Java Spring Boot, SQL, Postman, HTML,
-                    Tailwind CSS, React Js.
+                    Test Credentials : demo1@gmail.com (email), demo@123
+                    (password)
+                  </li>
+                  <li>
+                    Tech Stack - React Js, Node Js, Express, Mongoose, MongoDB.
                   </li>
                 </ul>
               </div>
             </div>
+
             <div>
               <div className="font-semibold text-base text-black">
                 Other Projects
               </div>
-              <ul>
-                <li>Weather.io</li>
+              <ul className="px-4 py-2 list-disc flex flex-col gap-1">
+                <li>
+                  CaffeZilla (MERN Stack) -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://caffe-zilla.vercel.app/"}
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/CaffeZilla"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Weather.io 2.0 (React Js) -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={
+                        "https://weather-io2-4lfbqklqx-arihantxd.vercel.app/"
+                      }
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Weather.io2"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Project Overlap (Startup landing page) -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={
+                        "https://overlap-fyrobfcdl-arihantxds-projects.vercel.app/"
+                      }
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/OverlapClone"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Resume V1 -
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={
+                        "https://portfolio-website-5p7h2l8ij-arihantxd.vercel.app"
+                      }
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Portfolio-Website"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Resume V2 -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={
+                        "https://portfolio-v02-i3hh69xs1-arihantxds-projects.vercel.app"
+                      }
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Portfolio-V02"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Weather.io V1 -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://weather-336lbuv61-arihantxd.vercel.app/"}
+                    >
+                      Live Link
+                    </Link>
+                    ,{" "}
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Weather.io"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Paytm -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/paytm"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  Rustro -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/Restro"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
+                <li>
+                  DrawIt -{" "}
+                  <span>
+                    <Link
+                      target="_blank"
+                      className="underline cursor-pointer"
+                      href={"https://github.com/arihantXD/excelidraw"}
+                    >
+                      GitHub
+                    </Link>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
         </div>
+        <DialogTrigger asChild>
+          <span className="cursor-pointer hover:underline text-light-gray font-medium">
+            Close
+          </span>
+        </DialogTrigger>
       </DialogContent>
     </Dialog>
   );
