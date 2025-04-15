@@ -1,4 +1,4 @@
-import ExperienceModal from "../components/modals/ExperienceModal";
+import ProjectModal from "../components/modals/ProjectModal";
 
 const PersonalProjects = () => {
   return (
@@ -14,7 +14,7 @@ const PersonalProjects = () => {
         I have worked on multiple projects and hosted them online, some projects
         eventually transitioned into freelancing opportunities, I am passionate
         client-focused results and delivering impactful solutions.{" "}
-        <ExperienceModal />
+        <ProjectModal />
       </div>
     </div>
   );

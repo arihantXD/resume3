@@ -48,6 +48,22 @@
   --color-black: #1e201e;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d7c0ae;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4c585b;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
