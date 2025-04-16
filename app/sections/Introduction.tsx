@@ -18,6 +18,7 @@ const IntroSection = () => {
           details. Please checkout{" "}
           <Link
             href={"/Resume.docx"}
+            target="_blank"
             className="text-light-gray underline font-medium"
           >
             My Resume
