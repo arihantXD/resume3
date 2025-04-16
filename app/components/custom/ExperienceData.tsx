@@ -39,8 +39,9 @@ const ExperienceData = () => {
                 resources. Also developed UI for Login and Dashboard Page.
               </li>
               <li>
-                Tech Stack - Java, Java Spring Boot, SQL, Postman, HTML,
-                Tailwind CSS, React Js.
+                <span className="font-medium text-black"> Tech Stack - </span>
+                Java, Java Spring Boot, SQL, Postman, HTML, Tailwind CSS, React
+                Js.
               </li>
             </ul>
           </div>
@@ -70,7 +71,10 @@ const ExperienceData = () => {
                 whole migration process. Developed clean and efficient codebase
                 and made the product client ready.
               </li>
-              <li>Tech Stack – ELM App, Java, Java Spring Boot, My Sql.</li>
+              <li>
+                <span className="font-medium text-black"> Tech Stack - </span>
+                ELM App, Java, Java Spring Boot, My Sql.
+              </li>
             </ul>
           </div>
         </div>
@@ -91,19 +95,24 @@ const ExperienceData = () => {
             </p>
             <ul className="list-disc p-4 flex flex-col gap-1">
               <li>
-                Link-Grabber – Enhanced this utility to facilitate fetching and
-                storing of links between ETM and ERM artifacts in the database.
-              </li>
-              <li>
-                Relinker – Enhanced this utility to facilitate fetching the
-                links from the database and then re-creating those artifacts
-                links in the target applications post migration.
-              </li>
-              <li>
                 Reducing manual effort by 90%, as the links are creted by runnig
                 my utility post migration.
               </li>
-              <li>Tech Stack – Java, Java Spring Boot, My Sql, Postman.</li>
+              <li>
+                <span className="font-medium text-black">Link-Grabber – </span>
+                Enhanced this utility to facilitate fetching and storing of
+                links between ETM and ERM artifacts in the database.
+              </li>
+              <li>
+                <span className="font-medium text-black">Relinker – </span>
+                Enhanced this utility to facilitate fetching the links from the
+                database and then re-creating those artifacts links in the
+                target applications post migration.
+              </li>
+              <li>
+                <span className="font-medium text-black">Tech Stack – </span>
+                Java, Java Spring Boot, My Sql, Postman.
+              </li>
             </ul>
           </div>
         </div>
@@ -125,7 +134,8 @@ const ExperienceData = () => {
                 administration.
               </li>
               <li>
-                Tech Stack – Web Sphere and WS Liberty, Ansible, ELM, UCD, UCR.
+                <span className="font-medium text-black">Tech Stack – s</span>
+                Web Sphere and WS Liberty, Ansible, ELM, UCD, UCR.
               </li>
             </ul>
           </div>

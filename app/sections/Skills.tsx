@@ -1,6 +1,6 @@
 const Skills = () => {
   return (
-    <div className="pt-12">
+    <div className="pt-14">
       <div className="text-light-gray text-base font-medium">Tech Stack</div>
       <div className="px-2 pb-4 pt-6 flex flex-wrap justify-center [&>div]:w-[80px] [&>div]:border [&>div]:border-lighter-gray [&>div]:bg-extra-light-gray gap-4 ">
         <div className="p-2 rounded  flex flex-col items-center gap-1 w-fit ">

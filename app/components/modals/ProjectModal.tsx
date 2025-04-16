@@ -5,14 +5,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { MoveRight } from "lucide-react";
 import Link from "next/link";
 
 const ProjectModal = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <span className="cursor-pointer hover:underline text-light-gray font-medium">
-          More Details...
+        <span className="pt-2 cursor-pointer hover:underline text-light-gray font-medium">
+          <span className="flex items-center gap-2">
+            More Details
+            <MoveRight />
+          </span>
         </span>
       </DialogTrigger>
       <DialogContent className="w-[97%] min-h-[500px] h-[80vh] overflow-y-auto ">
@@ -69,7 +73,7 @@ const ProjectModal = () => {
                   <li>
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://lazydev-web.onrender.com/"}
                     >
                       {" "}
@@ -78,19 +82,23 @@ const ProjectModal = () => {
                     ,{" "}
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://github.com/arihantXD/lazydev"}
                     >
                       GitHub
                     </Link>
                   </li>
                   <li>
-                    Test Credentials - test@gmail.com (email), test@123
-                    (password)
+                    <span className="font-medium text-black">
+                      Test Credentials -{" "}
+                    </span>
+                    test@gmail.com (email), test@123 (password)
                   </li>
                   <li>
-                    Tech Stack - Next Js, Node Js, Typescript, Express, Prisma,
-                    PostgreSql.
+                    <span className="font-medium text-black">
+                      Tech Stack -{" "}
+                    </span>
+                    Next Js, Node Js, Typescript, Express, Prisma, PostgreSql.
                   </li>
                 </ul>
               </div>
@@ -110,7 +118,7 @@ const ProjectModal = () => {
                   <li>
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://jobify-sdkn.onrender.com/"}
                     >
                       {" "}
@@ -119,18 +127,23 @@ const ProjectModal = () => {
                     ,{" "}
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://github.com/arihantXD/Jobify"}
                     >
                       GitHub
                     </Link>
                   </li>
                   <li>
-                    Test Credentials : demo1@gmail.com (email), - demo@123
-                    (password)
+                    <span className="font-medium text-black">
+                      Test Credentials -
+                    </span>
+                    demo1@gmail.com (email), - demo@123 (password)
                   </li>
                   <li>
-                    Tech Stack - React Js, Node Js, Express, Mongoose, MongoDB.
+                    <span className="font-medium text-black">
+                      Tech Stack -{" "}
+                    </span>
+                    React Js, Node Js, Express, Mongoose, MongoDB.
                   </li>
                 </ul>
               </div>
@@ -152,7 +165,7 @@ const ProjectModal = () => {
                   <li>
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://gen-z-five.vercel.app/"}
                     >
                       {" "}
@@ -161,18 +174,23 @@ const ProjectModal = () => {
                     ,{" "}
                     <Link
                       target="_blank"
-                      className="underline cursor-pointer"
+                      className="underline cursor-pointer font-medium"
                       href={"https://github.com/arihantXD/genz"}
                     >
                       GitHub
                     </Link>
                   </li>
                   <li>
-                    Test Credentials : demo1@gmail.com (email), demo@123
-                    (password)
+                    <span className="font-medium text-black">
+                      Test Credentials -{" "}
+                    </span>
+                    demo1@gmail.com (email), demo@123 (password)
                   </li>
                   <li>
-                    Tech Stack - React Js, Node Js, Express, Mongoose, MongoDB.
+                    <span className="font-medium text-black">
+                      Tech Stack -{" "}
+                    </span>
+                    React Js, Node Js, Express, Mongoose, MongoDB.
                   </li>
                 </ul>
               </div>
@@ -184,7 +202,9 @@ const ProjectModal = () => {
               </div>
               <ul className="px-4 py-2 list-disc flex flex-col gap-1">
                 <li>
-                  CaffeZilla (MERN Stack) -{" "}
+                  <span className="font-medium text-black">
+                    CaffeZilla (MERN Stack) -{" "}
+                  </span>
                   <span>
                     <Link
                       target="_blank"
@@ -204,7 +224,9 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Weather.io 2.0 (React Js) -{" "}
+                  <span className="font-medium text-black">
+                    Weather.io 2.0 (React Js) -{" "}
+                  </span>
                   <span>
                     <Link
                       target="_blank"
@@ -226,7 +248,9 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Project Overlap (Startup landing page) -{" "}
+                  <span className="font-medium text-black">
+                    Project Overlap (Startup landing page) -{" "}
+                  </span>
                   <span>
                     <Link
                       target="_blank"
@@ -248,7 +272,7 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Resume V1 -
+                  <span className="font-medium text-black">Resume V1 - </span>
                   <span>
                     <Link
                       target="_blank"
@@ -270,7 +294,7 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Resume V2 -{" "}
+                  <span className="font-medium text-black">Resume V2 - </span>
                   <span>
                     <Link
                       target="_blank"
@@ -292,7 +316,9 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Weather.io V1 -{" "}
+                  <span className="font-medium text-black">
+                    Weather.io V1 -{" "}
+                  </span>
                   <span>
                     <Link
                       target="_blank"
@@ -312,7 +338,7 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Paytm -{" "}
+                  <span className="font-medium text-black">Paytm - </span>
                   <span>
                     <Link
                       target="_blank"
@@ -324,7 +350,7 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  Rustro -{" "}
+                  <span className="font-medium text-black">Rustro - </span>
                   <span>
                     <Link
                       target="_blank"
@@ -336,7 +362,7 @@ const ProjectModal = () => {
                   </span>
                 </li>
                 <li>
-                  DrawIt -{" "}
+                  <span className="font-medium text-black">DrawIt - </span>
                   <span>
                     <Link
                       target="_blank"
