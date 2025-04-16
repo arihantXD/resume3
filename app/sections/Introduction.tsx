@@ -12,7 +12,7 @@ const IntroSection = () => {
       </div>
       <div className="pt-4 flex flex-col gap-4">
         <p>
-          Hi my name is Arihant, I am just a guy with strong passion of
+          Hi my name is Arihant, I am just a guy with strong passion for
           technology, development, design and self - improvement. My work
           emphasizes simplicity, minimalism, and meticulous attention to
           details. Please checkout{" "}
@@ -21,7 +21,7 @@ const IntroSection = () => {
             className="text-light-gray underline font-medium"
           >
             My Resume
-          </Link>
+          </Link>{" "}
           as well.
         </p>
 

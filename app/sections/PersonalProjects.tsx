@@ -30,7 +30,7 @@ const PersonalProjects = () => {
               </div>
               <div>
                 Lazy Dev is an ultimate dev productivity tool, it automates
-                creating resume, project portfolio, and live links along with a
+                creating resumes, project portfolio, and live links along with a
                 dashboard. Users can just log in, update once, and share their
                 personalized portfolio page.{" "}
                 <span>

@@ -64,7 +64,7 @@ const ProjectModal = () => {
               <div className="py-2">
                 <p>
                   Lazy Dev is an ultimate dev productivity tool, it automates
-                  creating resume, project portfolio, and live links along with
+                  creating resumes, project portfolio, and live links along with
                   a dashboard. Users can just log in, update once, and share
                   their personalized portfolio page. Built for devs who who are
                   too lazy to create a portfolio website.
