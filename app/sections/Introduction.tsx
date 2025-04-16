@@ -20,9 +20,11 @@ const IntroSection = () => {
             href={"/Resume.docx"}
             className="text-light-gray underline font-medium"
           >
-            My Resume.
+            My Resume
           </Link>
+          as well.
         </p>
+
         <p>
           I have experience in web development, designing, database admin,
           deployment and maintenance. Each project allows me to refine my skills
